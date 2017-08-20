@@ -34,8 +34,9 @@ app.factory("UserFactory", function($q, $http, fbcreds){
 
     let getUser = (userId)=>{
         return $q((resolve,reject)=>{
-            $http.get(`${fbcreds.databaseURL}/user/${userId}.json`)
+            $http.get(`${fbcreds.databaseURL}/user.json?orderBy="uid"&equalTo="${userId}"`)
             .then((userObject)=>{
+                //console.log("userObject", userObject);
                 let users = [];
                 Object.keys(userObject).forEach( (key)=>{
                     users.push(userObject[key]);
