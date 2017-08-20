@@ -17,6 +17,21 @@ app.factory("UserFactory", function($q, $http, fbcreds){
             });
         });
     };
+    let authUser = (userId)=>{
+        return $q((resolve,reject)=>{
+            $http.get(`${fbcreds.databaseURL}/user.json?orderBy="uid"&equalTo="${userId}"`)
+            .then((userObject)=>{
+                let users = [];
+                Object.keys(userObject).forEach( (key)=>{
+                    users.push(userObject[key]);
+                });
+                resolve(users[0]);
+            })
+            .catch((getUserError)=>{
+                reject(getUserError);
+            });
+        });
+    };
 
     let getUser = (userId)=>{
         return $q((resolve,reject)=>{
@@ -32,7 +47,7 @@ app.factory("UserFactory", function($q, $http, fbcreds){
                 reject(getUserError);
             });
         });
-
     };
-    return {addUser:addUser, getUser:getUser};
+
+    return {addUser:addUser, getUser:getUser, authUser:authUser};
 });
