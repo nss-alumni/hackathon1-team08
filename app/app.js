@@ -50,5 +50,10 @@ app.config( $routeProvider => {
     controller: 'HomeCtrl',
     resolve: {isAuth}
   })
+  .when('/profile', {
+    templateUrl: 'partials/progress.html',
+    controller: 'ProgressCtrl',
+    resolve: {isAuth}
+  })
   .otherwise('/');
 });
