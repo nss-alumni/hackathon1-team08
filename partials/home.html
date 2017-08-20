@@ -2,26 +2,32 @@
     <div class="row">
         <div class="col s12 center-align">
             <h1>{{groupName}}</h1>
+            <div class="col s10 offset-s1 center-align">
+                <a class="waves-effect waves-light btn" ng-href="/#!/createGroup">Create Group</a>
+            </div>
         </div>
     </div> 
-    <div class="row"  ng-repeat="item in groupActivity">
-        <div class="col s12 m8 offset-m4">
-            <div class="card indigo darken-1">
-                <div class="card-content white-text">
-                    <span class="card-title">{{item.title}}</span>
-                    <p>User: {{item.name}}</p>
-                    <p>Task: {{item.text}}</p>
-                    <p ng-show=item.completed>
-                        <input type="checkbox" id="completed" checked="checked" />
-                        <label for="completed">Completed</label>
-                    </p>
-                    <p ng-hide=item.completed>
-                        <input type="checkbox" id="completed" />
-                        <label for="completed">Completed</label>
-                    </p>
-                    <div class="card-action">
-                        <i class="material-icons">edit</i>
-                        <i class="material-icons">delete</i>
+    <div class="row">
+        <div class="col s12 m6">
+            <div id="myBarChart"></div>
+        </div>
+        <div class="col s12 m6">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card indigo darken-1"   ng-repeat="item in groupActivity">
+                        <div class="card-content white-text">
+                            <span class="card-title">{{item.title}}</span>
+                            <p>User: {{item.name}}</p>
+                            <p>Task: {{item.text}}</p>
+                            <p ng-show=item.completed>
+                                <input type="checkbox" id="completed" checked="checked" />
+                                <label for="completed">Completed</label>
+                            </p>
+                            <p ng-hide=item.completed>
+                                <input type="checkbox" id="completed" />
+                                <label for="completed">Completed</label>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
