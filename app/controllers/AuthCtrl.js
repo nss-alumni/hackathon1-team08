@@ -17,8 +17,8 @@ app.controller("AuthCtrl", function($location, $scope, $rootScope, AuthFactory, 
     };
     let logMeIn = (loginStuff)=>{
         AuthFactory.authenticate(loginStuff).then( (loginResponse)=>{
-            console.log("loginResponse", loginResponse.uid);
-            return UserFactory.getUser(loginResponse.uid);
+            console.log("loginResponse", loginResponse);
+            return UserFactory.authUser(loginResponse.uid);
         }).then( (userCreds)=>{
             console.log("userCreds", userCreds);
             $rootScope.user = userCreds;
@@ -30,7 +30,6 @@ app.controller("AuthCtrl", function($location, $scope, $rootScope, AuthFactory, 
     };
     $scope.loginGoogleUser = ()=>{
         AuthFactory.authenticateGoogle().then( (logGoogleResponse)=>{
-            console.log("logGoogleResponse", logGoogleResponse);
             $rootScope.user = {
                 uid: logGoogleResponse.uid,
                 username: logGoogleResponse.displayName
@@ -40,6 +39,17 @@ app.controller("AuthCtrl", function($location, $scope, $rootScope, AuthFactory, 
             $location.url('/home');
         }).then( (logGoogleComplete)=>{
             console.log("logGoogleComplete", logGoogleComplete);
+        });
+    };
+    $scope.loginGithubUser = ()=>{
+        AuthFactory.authenticateGithub().then( (logGithubResponse)=>{
+            console.log($rootScope.token);
+            $rootScope.user = logGithubResponse;
+            $scope.login = {};
+            $scope.register = {};
+            $location.url('/home');
+        }).then( (logGithubComplete)=>{
+            console.log("logGithubComplete", logGithubComplete);
         });
     };
     $scope.registerUser = function(registerNewUser){
@@ -52,10 +62,10 @@ app.controller("AuthCtrl", function($location, $scope, $rootScope, AuthFactory, 
             logMeIn(registerNewUser);
         });
     };
-    let loginSetUser = {};
-    loginSetUser.email = "a@a.com";
-    loginSetUser.password = "asdfasdf";
-    logMeIn(loginSetUser);
+    // let loginSetUser = {};
+    // loginSetUser.email = "a@a.com";
+    // loginSetUser.password = "asdfasdf";
+    // logMeIn(loginSetUser);
     $scope.loginUser = function(loginNewUser){
         logMeIn(loginNewUser);
     };

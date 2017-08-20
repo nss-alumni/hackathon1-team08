@@ -59,6 +59,22 @@ app.factory("AuthFactory", function($q, $http, $rootScope, fbcreds) {
         });
     });
   };
-
-  return {isAuthenticated:isAuthenticated, getUser:getUser, logout:logout, registerWithEmail:registerWithEmail, authenticate:authenticate, authenticateGoogle: authenticateGoogle};
+//Firebase: Github - Use input credentials to authenticate user.
+  let authenticateGithub = () => {
+    return $q((resolve, reject) => {
+      var provider = new firebase.auth.GithubAuthProvider();
+      console.log("provider", provider);
+      firebase.auth().signInWithPopup(provider)
+        .then((authData) => {
+          console.log("authData", authData);
+          $rootScope.token = authData.credential.accessToken;
+          currentUserData = authData.user;
+          console.log("currentUserData", currentUserData);
+          resolve(currentUserData);
+        }).catch((error)=> {
+          reject(error);
+        });
+    });
+  };
+  return {isAuthenticated:isAuthenticated, getUser:getUser, logout:logout, registerWithEmail:registerWithEmail, authenticate:authenticate, authenticateGoogle: authenticateGoogle, authenticateGithub: authenticateGithub};
 });
