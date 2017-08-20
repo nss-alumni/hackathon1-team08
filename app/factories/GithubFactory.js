@@ -1,10 +1,11 @@
 "use strict";
 app.factory("GithubFactory", function($q, $http, githubcreds){
+    // const GH = new GitHub();
     var getGithubUser = (userInput)=>{
         return $q((resolve,reject)=>{
             $http.get(`https://hypothes.is/api/${userInput}`, {
                 headers: {
-                    'Authorization': 'Bearer ' +HYPOTHESIS_TOKEN.Authorization
+                    'Authorization': 'Bearer ' +githubcreds.Authorization
                 }
             })
             .success( (getHypothesisResponse)=>{
@@ -21,11 +22,11 @@ app.factory("GithubFactory", function($q, $http, githubcreds){
             });
         });
     };
-    var getHypothesisJSON = (oneAnnotation)=>{
+    var getGithubEvents = (oneAnnotation)=>{
         return $q((resolve,reject)=>{
             $http.get(`https://hypothes.is/api/annotations/${oneAnnotation.id}`, {
                 headers: {
-                    'Authorization': 'Bearer ' +HYPOTHESIS_TOKEN.Authorization
+                    'Authorization': 'Bearer ' +githubcreds.Authorization
                 }
             })
             .success( (getHypothesisJSONResponse)=>{
@@ -37,5 +38,5 @@ app.factory("GithubFactory", function($q, $http, githubcreds){
             });
         });
     };
-    return {searchHypothesis, getHypothesisJSON};
+    return {getGithubUser, getGithubEvents};
 });
