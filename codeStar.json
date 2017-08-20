@@ -1,0 +1,196 @@
+{
+	"user": {
+		"1": {
+			"name": "Harry Potter",
+			"username": "hpotter"
+		},
+		"2": {
+			"name": "Hermione Granger",
+			"username": "hGranger"
+		},
+		"3": {
+			"name": "Ron Weasley",
+			"username": "rWeasley"
+		}
+	},
+	"task": {
+		"1": {
+			"uid":1,
+			"title":"First",
+			"text":"Push to GitHub",
+			"completed": "true", 
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11"
+		},
+		"2": {
+			"uid":1,
+			"title":"Second",
+			"text":"Push to GitHub",
+			"completed": "false", 
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11"
+		},
+		"3": {
+			"uid":1,
+			"title":"First for this week",
+			"text":"Push to GitHub",
+			"completed": "true", 
+			"date-start": "2017-8-12",
+			"date-end": "2017-8-18"
+		},
+		"4": {
+			"uid":1,
+			"title":"Another push",
+			"text":"Push to GitHub",
+			"completed": "false", 
+			"date-start": "2017-8-12",
+			"date-end": "2017-8-18"
+		},
+		"5": {
+			"uid":2,
+			"title":"First",
+			"text":"Push to GitHub",
+			"completed": "false", 
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11"
+		},
+		"6": {
+			"uid":2,
+			"title":"Second",
+			"text":"Push to GitHub",
+			"completed": "true", 
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11"
+		},
+		"7": {
+			"uid":2,
+			"title":"First for this week",
+			"text":"Push to GitHub",
+			"completed": "true", 
+			"date-start": "2017-8-12",
+			"date-end": "2017-8-18"
+		},
+		"8": {
+			"uid":2,
+			"title":"another",
+			"text":"Push to GitHub",
+			"completed": "false", 
+			"date-start": "2017-8-12",
+			"date-end": "2017-8-18"
+		},
+		"9": {
+			"uid":2,
+			"title":"First for this week",
+			"text":"Push to GitHub",
+			"completed": "true", 
+			"date-start": "2017-8-19",
+			"date-end": "2017-8-25"
+		},
+		"10": {
+			"uid":2,
+			"title":"First",
+			"text":"Push to GitHub",
+			"completed": "false", 
+			"date-start": "2017-8-19",
+			"date-end": "2017-8-25"
+		},
+		"11": {
+			"uid":3,
+			"title":"First",
+			"text":"Push to GitHub",
+			"completed": "false", 
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11"
+		},
+		"12": {
+			"uid":3,
+			"title":"First for this week",
+			"text":"Push to GitHub",
+			"completed": "false", 
+			"date-start": "2017-8-12",
+			"date-end": "2017-8-18"
+		},
+		"13": {
+			"uid":3,
+			"title":"First",
+			"text":"Push to GitHub",
+			"completed": "false", 
+			"date-start": "2017-8-19",
+			"date-end": "2017-8-25"
+		}
+	},
+	"star": {
+		"1": {
+			"uid":1,
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11",
+			"gold": 0,
+			"silver": 0,
+			"bronze": 1
+		},
+		"2": {
+			"uid":"1",
+			"date-start": "2017-8-12",
+			"date-end": "2017-8-18",
+			"gold": 0,
+			"silver": 1,
+			"bronze": 1
+		},
+		"3": {
+			"uid":"1",
+			"date-start": "2017-8-19",
+			"date-end": "2017-8-25",
+			"gold": 1,
+			"silver": 1,
+			"bronze": 1
+		},
+		"4": {
+			"uid":"2",
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11",
+			"gold": 1,
+			"silver": 1,
+			"bronze": 1
+		},
+		"5": {
+			"uid":"2",
+			"date-start": "2017-8-12",
+			"date-end": "2017-8-18",
+			"gold": 1,
+			"silver": 1,
+			"bronze": 1
+		},
+		"6": {
+			"uid":"2",
+			"date-start": "2017-8-19",
+			"date-end": "2017-8-25",
+			"gold": 1,
+			"silver": 1,
+			"bronze": 1
+		},
+		"7": {
+			"uid":"2",
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11",
+			"gold": 0,
+			"silver": 0,
+			"bronze": 0
+		},
+		"8": {
+			"uid":"2",
+			"date-start": "2017-8-12",
+			"date-end": "2017-8-18",
+			"gold": 0,
+			"silver": 0,
+			"bronze": 0
+		},
+		"9": {
+			"uid":"2",
+			"date-start": "2017-8-19",
+			"date-end": "2017-8-25",
+			"gold": 0,
+			"silver": 0,
+			"bronze": 0
+		}
+	}
+}
