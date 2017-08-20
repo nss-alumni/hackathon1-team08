@@ -17,7 +17,7 @@ app.controller("AuthCtrl", function($location, $scope, $rootScope, AuthFactory, 
     };
     let logMeIn = (loginStuff)=>{
         AuthFactory.authenticate(loginStuff).then( (loginResponse)=>{
-            // console.log("loginResponse", loginResponse);
+            console.log("loginResponse", loginResponse);
             return UserFactory.getUser(loginResponse.uid);
         }).then( (userCreds)=>{
             $rootScope.user = userCreds;
