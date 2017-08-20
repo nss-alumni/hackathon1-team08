@@ -9,7 +9,8 @@ let isAuth = (AuthFactory)=>{
     } else {
       reject();
     }
-  });
+  })
+  .catch(console.log);
 };
 
 app.run(($rootScope, $location, AuthFactory, fbcreds)=>{

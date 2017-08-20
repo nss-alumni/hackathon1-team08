@@ -32,7 +32,7 @@ app.controller("AuthCtrl", function($location, $scope, $rootScope, AuthFactory, 
             console.log("logGoogleResponse", logGoogleResponse);
             $rootScope.user = {
                 uid: logGoogleResponse.uid,
-                username: logGoogleResponse.displayName 
+                username: logGoogleResponse.displayName
             };
             $scope.login = {};
             $scope.register = {};
