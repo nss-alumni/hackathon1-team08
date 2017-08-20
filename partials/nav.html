@@ -1,0 +1,20 @@
+<div ng-controller="NavCtrl">
+    <div class="navbar-fixed">
+        <nav>
+          <div class="nav wrapper">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <a href="#!" class="brand-logo center">Code Stars</a>
+            
+            <!-- normal navigation -->
+            <ul class="right hide-on-med-and-down" ng-repeat="navItem in navItems" ng-show="user">
+                <li><a href="{{navItem.url}}">{{navItem.name}}</a></li>
+            </ul>  
+            <!-- Side navigation  -->
+            <ul class="side-nav" id="nav-mobile" ng-repeat="navItem in navItems" >
+                <li><a href="{{navItem.url}}">{{navItem.name}}</a></li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="300" data-closeonclick="false" class="hide-on-large-only"><i class="material-icons">menu</i></a>
+          </div><!-- /.navwrapper -->
+        </nav>
+    </div>
+</div>
