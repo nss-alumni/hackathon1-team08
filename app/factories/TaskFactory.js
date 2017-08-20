@@ -13,6 +13,11 @@ app.factory("TaskFactory", function($q, $http, fbcreds, $route){
 		.catch(console.error);
 	};
 
-	return { createTask, getTask };
+	const updateTask = (taskId, taskObj) => {
+		return $http.patch(`${fbcreds.databaseURL}/task/${taskId}.json`, taskObj)
+		.catch(console.error);
+	};
+
+	return { createTask, getTask, updateTask };
 
 });

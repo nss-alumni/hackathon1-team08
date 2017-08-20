@@ -38,13 +38,28 @@ app.controller("TaskCtrl", function($scope, $rootScope, $location, $routeParams,
         TaskFactory.createTask($scope.task)
         .then((task) => {
             if (task.status === 200) {
-                $scope.task.title = '';
-                $scope.task.text = '';
                 $location.url('/progress');
             } else {
                 $scope.errorMsg = 'Something went wrong, please try again.';
             }
         });
+    };
+
+    $scope.updateTask = () => {
+        if ($scope.failedValidation()) {
+            $scope.errorMsg = 'Please complete the form.';
+            return;
+        }
+
+        TaskFactory.updateTask($routeParams.taskId, $scope.task)
+        .then((task) => {
+            if (task.status === 200) {
+                $location.url('/progress');
+            } else {
+                $scope.errorMsg = 'Something went wrong, please try again.';
+            }
+        })
+        .catch(console.error);
     };
 
     // If a task exists and there is a taskId param, set editing mode to true
