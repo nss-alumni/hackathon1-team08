@@ -49,5 +49,22 @@ app.factory("UserFactory", function($q, $http, fbcreds){
         });
     };
 
-    return {addUser:addUser, getUser:getUser, authUser:authUser};
+    let getAllUsers = ()=>{
+        return $q((resolve, reject) => {
+            $http.get(`${fbcreds.databaseURL}/user.json`)
+            .then((allUsersResponse) => {
+                let users = [];
+                Object.keys(allUsersResponse.data).forEach((key) => {
+                    allUsersResponse.data[key].key = key;
+                    users.push(allUsersResponse.data[key]);
+                 });
+                resolve(users);
+             })
+            .catch((errorResponse) => {
+                reject(errorResponse);
+            });
+        });
+    };
+
+    return {addUser:addUser, getUser:getUser, authUser:authUser, getAllUsers:getAllUsers};
 });

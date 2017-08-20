@@ -51,5 +51,10 @@ app.config( $routeProvider => {
     controller: 'HomeCtrl',
     resolve: {isAuth}
   })
+  .when('/createGroup', {
+    templateUrl: 'partials/groupForm.html',
+    controller: 'CreateGroupCtrl',
+    resolve: {isAuth}
+  })
   .otherwise('/');
 });
