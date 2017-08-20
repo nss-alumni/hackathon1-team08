@@ -9,7 +9,8 @@ let isAuth = (AuthFactory)=>{
     } else {
       reject();
     }
-  });
+  })
+  .catch(console.log);
 };
 
 app.run(($rootScope, $location, AuthFactory, fbcreds)=>{
@@ -49,6 +50,11 @@ app.config( $routeProvider => {
     templateUrl: 'partials/home.html',
     controller: 'HomeCtrl',
     resolve: {isAuth}
+  })
+  .when("/task/create", {
+	  templateUrl: "partials/task.html",
+	  controller: "TaskCtrl",
+	  resolve: {isAuth}
   })
   .otherwise('/');
 });
