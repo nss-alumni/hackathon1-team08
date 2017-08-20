@@ -51,6 +51,11 @@ app.config( $routeProvider => {
     controller: 'HomeCtrl',
     resolve: {isAuth}
   })
+  .when('/progress', {
+    templateUrl: 'partials/progressTest.html',
+    controller: 'ProgTestCtrl',
+    resolve: {isAuth}
+  })
   .when('/task/create', {
     templateUrl: 'partials/task.html',
     controller: 'TaskCtrl',

@@ -18,6 +18,16 @@ app.factory("TaskFactory", function($q, $http, fbcreds, $route){
 		.catch(console.error);
 	};
 
-	return { createTask, getTask, updateTask };
+	const toggleTaskComplete = (taskId, completed) => {
+		return $http.patch(`${fbcreds.databaseURL}/task/${taskId}.json`, { completed })
+		.catch(console.error);
+	};
+
+	const deleteTask = (taskId) => {
+		return $http.delete(`${fbcreds.databaseURL}/task/${taskId}.json`)
+		.catch(console.error);
+	}
+
+	return { createTask, getTask, updateTask, toggleTaskComplete, deleteTask };
 
 });
