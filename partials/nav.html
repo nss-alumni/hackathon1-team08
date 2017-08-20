@@ -6,14 +6,14 @@
             <a href="#!" class="brand-logo center">Code Stars</a>
             
             <!-- normal navigation -->
-            <ul class="right hide-on-med-and-down" ng-repeat="navItem in navItems" ng-show="user">
+            <ul class="right hide-on-med-and-down" ng-repeat="navItem in navItems" >
                 <li><a href="{{navItem.url}}">{{navItem.name}}</a></li>
             </ul>  
             <!-- Side navigation  -->
-            <ul class="side-nav" id="nav-mobile" ng-repeat="navItem in navItems" ng-show="user">
+            <ul class="side-nav" id="nav-mobile" ng-repeat="navItem in navItems" >
                 <li><a href="{{navItem.url}}">{{navItem.name}}</a></li>
             </ul>
-            <a href="#" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="300" data-closeonclick="false"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="300" data-closeonclick="false" class="hide-on-large-only"><i class="material-icons">menu</i></a>
           </div><!-- /.navwrapper -->
         </nav>
     </div>
