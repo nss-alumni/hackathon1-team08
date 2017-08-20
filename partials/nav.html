@@ -1,20 +1,34 @@
 <div ng-controller="NavCtrl">
-    <div class="navbar-fixed">
-        <nav>
-          <div class="nav wrapper">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <a href="#!" class="brand-logo center">Code Stars</a>
-            
-            <!-- normal navigation -->
-            <ul class="right hide-on-med-and-down" ng-repeat="navItem in navItems" ng-show="user">
-                <li><a href="{{navItem.url}}">{{navItem.name}}</a></li>
-            </ul>  
-            <!-- Side navigation  -->
-            <ul class="side-nav" id="nav-mobile" ng-repeat="navItem in navItems" >
-                <li><a href="{{navItem.url}}">{{navItem.name}}</a></li>
-            </ul>
-            <a href="#" data-activates="nav-mobile" data-sidenav="left" data-menuwidth="300" data-closeonclick="false" class="hide-on-large-only"><i class="material-icons">menu</i></a>
-          </div><!-- /.navwrapper -->
-        </nav>
-    </div>
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+              <div class="nav wrapper">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a href="#!" class="brand-logo center">Code Stars</a>
+                
+                <!-- normal navigation -->
+                <ul class="right hide-on-med-and-down" ng-show="user">
+                    <li><a href="#/home">Home</a></li>
+                    <li><a href="#/progress">Progress</a></li>
+                    <li><a href="#/logout">Logout</a></li>
+                </ul>  
+                <a href="#" data-activates="nav-mobile" data-sidenav="right" data-menuwidth="300" data-closeonclick="true" class="right hide-on-large-only button-collapse"><i class="material-icons">menu</i></a>
+              </div><!-- /.navwrapper -->
+            </nav>
+        </div>
+        <!-- Side navigation  -->
+        <ul class="side-nav" id="nav-mobile" ng-show="user" >
+            <div class="userView">
+                    <div class="background indigo accent-1">
+                    </div>
+                    <a href="#/settings"><img class="circle" ng-src="{{user.photoURL}}"></a>
+                    <a href="#/settings"><span class="white-text name">{{user.username}}</span></a>
+                    <a href="#/settings"><span class="white-text email">{{user.email}}</span></a>
+                </div>
+            </li>    
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/progress">Progress</a></li>
+            <li><a href="#/logout">Logout</a></li>
+        </ul>
+    </header>
 </div>

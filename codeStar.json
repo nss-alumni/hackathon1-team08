@@ -1,5 +1,9 @@
 {
 	"user": {
+		"0": {
+			"name": "James Potter",
+			"username": "jpotter"
+		},
 		"1": {
 			"name": "Harry Potter",
 			"username": "hpotter"
@@ -14,11 +18,19 @@
 		}
 	},
 	"task": {
+		"0": {
+			"uid":0,
+			"title":"First",
+			"text":"Push to GitHub",
+			"completed": true, 
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11"
+		},
 		"1": {
 			"uid":1,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -26,7 +38,7 @@
 			"uid":1,
 			"title":"Second",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -34,7 +46,7 @@
 			"uid":1,
 			"title":"First for this week",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -42,7 +54,7 @@
 			"uid":1,
 			"title":"Another push",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -50,7 +62,7 @@
 			"uid":2,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -58,7 +70,7 @@
 			"uid":2,
 			"title":"Second",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -66,7 +78,7 @@
 			"uid":2,
 			"title":"First for this week",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -74,7 +86,7 @@
 			"uid":2,
 			"title":"another",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -82,7 +94,7 @@
 			"uid":2,
 			"title":"First for this week",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-19",
 			"date-end": "2017-8-25"
 		},
@@ -90,7 +102,7 @@
 			"uid":2,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-19",
 			"date-end": "2017-8-25"
 		},
@@ -98,7 +110,7 @@
 			"uid":3,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -106,7 +118,7 @@
 			"uid":3,
 			"title":"First for this week",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -114,12 +126,20 @@
 			"uid":3,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-19",
 			"date-end": "2017-8-25"
 		}
 	},
 	"star": {
+		"0": {
+			"uid":0,
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11",
+			"gold": 0,
+			"silver": 0,
+			"bronze": 1
+		},
 		"1": {
 			"uid":1,
 			"date-start": "2017-8-5",
