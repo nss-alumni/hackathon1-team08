@@ -1,16 +1,21 @@
 "use strict";
 
-app.controller("TaskCtrl", function($scope, isAuth, TaskFactory){
+app.controller("TaskCtrl", function($scope, $rootScope, $location, $routeParams, $route, isAuth, TaskFactory, Task){
+
+    // TODO remove
+    $rootScope.user = {
+        uid: 0
+    };
 
     $scope.isEditing = false;
     $scope.errorMsg = null;
 
     $scope.task = {
-        uid: isAuth,
+        uid: '',
         title: '',
         text: '',
         completed: false,
-        // 'date-start': window.moment().format('YYYY MMM DD'),
+        'date-start': moment().format('YYYY MMM DD'),
         'date-end': null,
     };
 
@@ -28,7 +33,26 @@ app.controller("TaskCtrl", function($scope, isAuth, TaskFactory){
             return;
         }
 
+        $scope.task.uid = $rootScope.user.uid;
 
+        TaskFactory.createTask($scope.task)
+        .then((task) => {
+            if (task.status === 200) {
+                $scope.task.title = '';
+                $scope.task.text = '';
+                $location.url('/progress');
+            } else {
+                $scope.errorMsg = 'Something went wrong, please try again.';
+            }
+        });
     };
+
+    // If a task exists and there is a taskId param, set editing mode to true
+    if (Task !== null && $routeParams.taskId) {
+        $scope.task = Task;
+        $scope.isEditing = true;
+    } else if (Task === null && $routeParams.taskId) {
+        $location.url('/profile');
+    }
 
 });
