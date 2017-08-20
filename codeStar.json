@@ -22,7 +22,7 @@
 			"uid":0,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -30,7 +30,7 @@
 			"uid":1,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -38,7 +38,7 @@
 			"uid":1,
 			"title":"Second",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -46,7 +46,7 @@
 			"uid":1,
 			"title":"First for this week",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -54,7 +54,7 @@
 			"uid":1,
 			"title":"Another push",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -62,7 +62,7 @@
 			"uid":2,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -70,7 +70,7 @@
 			"uid":2,
 			"title":"Second",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -78,7 +78,7 @@
 			"uid":2,
 			"title":"First for this week",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -86,7 +86,7 @@
 			"uid":2,
 			"title":"another",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -94,7 +94,7 @@
 			"uid":2,
 			"title":"First for this week",
 			"text":"Push to GitHub",
-			"completed": "true", 
+			"completed": true, 
 			"date-start": "2017-8-19",
 			"date-end": "2017-8-25"
 		},
@@ -102,7 +102,7 @@
 			"uid":2,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-19",
 			"date-end": "2017-8-25"
 		},
@@ -110,7 +110,7 @@
 			"uid":3,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-5",
 			"date-end": "2017-8-11"
 		},
@@ -118,7 +118,7 @@
 			"uid":3,
 			"title":"First for this week",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-12",
 			"date-end": "2017-8-18"
 		},
@@ -126,7 +126,7 @@
 			"uid":3,
 			"title":"First",
 			"text":"Push to GitHub",
-			"completed": "false", 
+			"completed": false, 
 			"date-start": "2017-8-19",
 			"date-end": "2017-8-25"
 		}

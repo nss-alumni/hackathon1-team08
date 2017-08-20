@@ -9,7 +9,20 @@
             <div class="card indigo darken-1">
                 <div class="card-content white-text">
                     <span class="card-title">{{item.title}}</span>
-                    <p>{{item.text}}</p>
+                    <p>User: {{item.name}}</p>
+                    <p>Task: {{item.text}}</p>
+                    <p ng-show=item.completed>
+                        <input type="checkbox" id="completed" checked="checked" />
+                        <label for="completed">Completed</label>
+                    </p>
+                    <p ng-hide=item.completed>
+                        <input type="checkbox" id="completed" />
+                        <label for="completed">Completed</label>
+                    </p>
+                    <div class="card-action">
+                        <i class="material-icons">edit</i>
+                        <i class="material-icons">delete</i>
+                    </div>
                 </div>
             </div>
         </div>
