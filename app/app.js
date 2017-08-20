@@ -51,10 +51,5 @@ app.config( $routeProvider => {
     controller: 'HomeCtrl',
     resolve: {isAuth}
   })
-  .when("/task/create", {
-	  templateUrl: "partials/task.html",
-	  controller: "TaskCtrl",
-	  resolve: {isAuth}
-  })
   .otherwise('/');
 });
