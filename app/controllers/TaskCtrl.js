@@ -2,11 +2,6 @@
 
 app.controller("TaskCtrl", function($scope, $rootScope, $location, $routeParams, $route, isAuth, TaskFactory, Task){
 
-    // TODO remove
-    $rootScope.user = {
-        uid: 0
-    };
-
     $scope.isEditing = false;
     $scope.errorMsg = null;
 

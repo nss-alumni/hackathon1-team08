@@ -5,12 +5,12 @@
               <div class="nav wrapper">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <a href="#!" class="brand-logo center">Code Stars</a>
-                
+
                 <!-- normal navigation -->
                 <ul class="right hide-on-med-and-down" ng-show="user">
-                    <li><a href="#/home">Home</a></li>
-                    <li><a href="#/progress">Progress</a></li>
-                    <li><a href="#/logout">Logout</a></li>
+                    <li><a ng-href="#!/home">Home</a></li>
+                    <li><a ng-href="#!/progress">Progress</a></li>
+                    <li><a ng-href="#!/logout">Logout</a></li>
                     <li><a href="#" data-activates="nav-mobile" data-sidenav="right" data-menuwidth="300" data-closeonclick="true" >Groups</a></li>
                 </ul>  
                 <a href="#" data-activates="nav-mobile" data-sidenav="right" data-menuwidth="300" data-closeonclick="true" class="right hide-on-large-only button-collapse"><i class="material-icons">menu</i></a>
@@ -26,7 +26,7 @@
                     <a href="#/settings"><span class="white-text name">{{user.username}}</span></a>
                     <a href="#/settings"><span class="white-text email">{{user.email}}</span></a>
                 </div>
-            </li>    
+            </li>
             <li><a href="#/home">Home</a></li>
             <li><a href="#/progress">Progress</a></li>
             <li><a href="#/logout">Logout</a></li>
