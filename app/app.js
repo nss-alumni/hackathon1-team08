@@ -10,7 +10,7 @@ let isAuth = (AuthFactory)=>{
       reject();
     }
   })
-  .catch(console.log);
+  .catch((err) => console.log('isAuth', err));
 };
 
 app.run(($rootScope, $location, AuthFactory, fbcreds)=>{
@@ -50,6 +50,28 @@ app.config( $routeProvider => {
     templateUrl: 'partials/home.html',
     controller: 'HomeCtrl',
     resolve: {isAuth}
+  })
+  .when('/task/create', {
+    templateUrl: 'partials/task.html',
+    controller: 'TaskCtrl',
+    resolve: {
+        isAuth,
+
+        Task: function(TaskFactory, $route) {
+            return TaskFactory.getTask($route.current.params.taskId);
+        }
+    }
+  })
+  .when('/task/:taskId', {
+    templateUrl: 'partials/task.html',
+    controller: 'TaskCtrl',
+    resolve: {
+        isAuth,
+
+        Task: function(TaskFactory, $route) {
+            return TaskFactory.getTask($route.current.params.taskId);
+        }
+    }
   })
   .otherwise('/');
 });

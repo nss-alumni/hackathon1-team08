@@ -38,5 +38,6 @@ app.factory("GithubFactory", function($q, $http, githubcreds){
             });
         });
     };
+
     return {getGithubUser, getGithubEvents};
 });
