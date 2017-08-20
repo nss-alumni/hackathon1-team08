@@ -1,11 +1,15 @@
 <div class="container">
     <div class="row">
-        <div class="col s12 m9 offset-m3">
+        <div class="col s12 center-align">
+            <h1>{{groupName}}</h1>
+        </div>
+    </div> 
+    <div class="row"  ng-repeat="item in groupActivity">
+        <div class="col s12 m8 offset-m4">
             <div class="card indigo darken-1">
                 <div class="card-content white-text">
-                    <span class="card-title">Card Title</span>
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively.</p>
+                    <span class="card-title">{{item.title}}</span>
+                    <p>{{item.text}}</p>
                 </div>
             </div>
         </div>

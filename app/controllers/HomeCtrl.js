@@ -5,6 +5,8 @@ app.controller("HomeCtrl", function($scope, $location, UserFactory, GroupFactory
 
 	$scope.activity = {};
 
+	$scope.groupName = "Bananas Group";
+
 	GroupFactory.getGroupActivity()
 	.then( groupObj => {
 		$scope.groupActivity = groupObj;
