@@ -25,7 +25,6 @@ app.factory("UserFactory", function($q, $http, fbcreds){
             .then((userObject)=>{
                 console.log("userObject", userObject.data);
                 let users = Object.values(userObject.data);
-                console.log(users);
                 resolve(users[0]);
             })
             .catch((getUserError)=>{
@@ -34,7 +33,24 @@ app.factory("UserFactory", function($q, $http, fbcreds){
         });
     };
 
-    let getUser = (userId)=>{
+    let getUser = (name)=>{
+        return $q((resolve,reject)=>{
+            $http.get(`${fbcreds.databaseURL}/user/.json?orderBy="name"&equalTo="${name}"`)
+            .then((userObject)=>{
+                let users = [];
+                Object.keys(userObject).forEach( (key)=>{
+                    console.log(userObject);
+                    console.log(userObject[key]);
+                    users.push(userObject[key]);
+                });
+                resolve(users[0]);
+            })
+            .catch((getUserError)=>{
+                reject(getUserError);
+            });
+        });
+    };
+    let getOneUser = (userId)=>{
         return $q((resolve,reject)=>{
             $http.get(`${fbcreds.databaseURL}/user/${userId}.json`)
             .then((userObject)=>{
@@ -56,6 +72,7 @@ app.factory("UserFactory", function($q, $http, fbcreds){
             .then((allUsersResponse) => {
                 let users = [];
                 Object.keys(allUsersResponse.data).forEach((key) => {
+                    allUsersResponse.data[key].key = key;
                     users.push(allUsersResponse.data[key]);
                  });
                 resolve(users);
@@ -65,6 +82,6 @@ app.factory("UserFactory", function($q, $http, fbcreds){
             });
         });
     };
-    return {addUser:addUser, getUser:getUser, authUser:authUser, getAllUsers: getAllUsers};
+    return {addUser:addUser, getUser:getUser, authUser:authUser, getAllUsers:getAllUsers, getOneUser:getOneUser};
 });
 
