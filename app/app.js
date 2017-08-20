@@ -54,6 +54,7 @@ app.config( $routeProvider => {
   .when('/progress', {
     templateUrl: 'partials/progress.html',
     controller: 'ProgressCtrl',
+    resolve: {isAuth}
   })
   .when('/createGroup', {
     templateUrl: 'partials/groupForm.html',

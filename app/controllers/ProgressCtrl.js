@@ -2,9 +2,9 @@
 
 app.controller("ProgressCtrl", function ($scope, ProgressFactory, $rootScope, TaskFactory, fbcreds, $http) {
     // TODO remove
-    $rootScope.user = {
-        uid: 0
-    };
+    // $rootScope.user = {
+    //     uid: 0
+    // };
 
     let user = $rootScope.user;
     $scope.bronzeStars = [];

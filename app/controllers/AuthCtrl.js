@@ -51,10 +51,12 @@ app.controller("AuthCtrl", function($location, $scope, $rootScope, AuthFactory, 
             logMeIn(registerNewUser);
         });
     };
-    let loginSetUser = {};
-    loginSetUser.email = "a@a.com";
-    loginSetUser.password = "asdfasdf";
-    logMeIn(loginSetUser);
+
+    // let loginSetUser = {};
+    // loginSetUser.email = "a@a.com";
+    // loginSetUser.password = "asdfasdf";
+    // logMeIn(loginSetUser);
+
     $scope.loginUser = function(loginNewUser){
         logMeIn(loginNewUser);
     };
