@@ -1,0 +1,353 @@
+{
+    "user": {
+        "user0": {
+            "name": "James Potter",
+            "username": "jpotter",
+            "uid": 0,
+            "tasks": {
+                "task0": true
+            },
+            "groups": {
+                "group0": true
+            },
+            "stars": {
+                "star0": true
+            }
+        },
+        "user1": {
+            "name": "Harry Potter",
+            "username": "hpotter",
+            "uid": 1,
+            "tasks": {
+                "task1": true
+            },
+            "groups": {
+                "group0": true
+            },
+            "stars": {
+                "star1": true
+            }
+        },
+        "user2": {
+            "name": "Hermione Granger",
+            "username": "hGranger",
+            "uid": 0,
+            "tasks": {
+                "task2": true
+            },
+            "groups": {
+                "group0": true
+            },
+            "stars": {
+                "star2": true
+            }
+        },
+        "user3": {
+            "name": "Ron Weasley",
+            "username": "rWeasley",
+            "uid": 0,
+            "tasks": {
+                "task3": true
+            },
+            "groups": {
+                "group0": true
+            },
+            "stars": {
+                "star3": true
+            }
+        }
+    },
+    "task": {
+        "task0": {
+            "uid":0,
+            "title":"First",
+            "text":"Push to GitHub",
+            "completed": true, 
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task1": {
+            "uid":1,
+            "title":"First",
+            "text":"Push to GitHub",
+            "completed": true, 
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task2": {
+            "uid":1,
+            "title":"Second",
+            "text":"Push to GitHub",
+            "completed": false, 
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task3": {
+            "uid":1,
+            "title":"First for this week",
+            "text":"Push to GitHub",
+            "completed": true, 
+            "date-start": "2017-8-12",
+            "date-end": "2017-8-18",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task4": {
+            "uid":1,
+            "title":"Another push",
+            "text":"Push to GitHub",
+            "completed": false, 
+            "date-start": "2017-8-12",
+            "date-end": "2017-8-18",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task5": {
+            "uid":2,
+            "title":"First",
+            "text":"Push to GitHub",
+            "completed": false, 
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task6": {
+            "uid":2,
+            "title":"Second",
+            "text":"Push to GitHub",
+            "completed": true, 
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task7": {
+            "uid":2,
+            "title":"First for this week",
+            "text":"Push to GitHub",
+            "completed": true, 
+            "date-start": "2017-8-12",
+            "date-end": "2017-8-18",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task8": {
+            "uid":2,
+            "title":"another",
+            "text":"Push to GitHub",
+            "completed": false, 
+            "date-start": "2017-8-12",
+            "date-end": "2017-8-18",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task9": {
+            "uid":2,
+            "title":"First for this week",
+            "text":"Push to GitHub",
+            "completed": true, 
+            "date-start": "2017-8-19",
+            "date-end": "2017-8-25",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task10": {
+            "uid":2,
+            "title":"First",
+            "text":"Push to GitHub",
+            "completed": false, 
+            "date-start": "2017-8-19",
+            "date-end": "2017-8-25",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task11": {
+            "uid":3,
+            "title":"First",
+            "text":"Push to GitHub",
+            "completed": false, 
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task12": {
+            "uid":3,
+            "title":"First for this week",
+            "text":"Push to GitHub",
+            "completed": false, 
+            "date-start": "2017-8-12",
+            "date-end": "2017-8-18",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        },
+        "task13": {
+            "uid":3,
+            "title":"First",
+            "text":"Push to GitHub",
+            "completed": false, 
+            "date-start": "2017-8-19",
+            "date-end": "2017-8-25",
+            "github_date_create": "",
+            "github_id": 0,
+            "payload": {},
+            "public": true,
+            "repo_url": "",
+            "type": ""
+        }
+    },
+    "star": {
+        "star0": {
+            "uid":0,
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "gold": 0,
+            "silver": 0,
+            "bronze": 1
+        },
+        "star1": {
+            "uid":1,
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "gold": 0,
+            "silver": 0,
+            "bronze": 1
+        },
+        "star2": {
+            "uid":"1",
+            "date-start": "2017-8-12",
+            "date-end": "2017-8-18",
+            "gold": 0,
+            "silver": 1,
+            "bronze": 1
+        },
+        "star3": {
+            "uid":"1",
+            "date-start": "2017-8-19",
+            "date-end": "2017-8-25",
+            "gold": 1,
+            "silver": 1,
+            "bronze": 1
+        },
+        "star4": {
+            "uid":"2",
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "gold": 1,
+            "silver": 1,
+            "bronze": 1
+        },
+        "star5": {
+            "uid":"2",
+            "date-start": "2017-8-12",
+            "date-end": "2017-8-18",
+            "gold": 1,
+            "silver": 1,
+            "bronze": 1
+        },
+        "star6": {
+            "uid":"2",
+            "date-start": "2017-8-19",
+            "date-end": "2017-8-25",
+            "gold": 1,
+            "silver": 1,
+            "bronze": 1
+        },
+        "star7": {
+            "uid":"2",
+            "date-start": "2017-8-5",
+            "date-end": "2017-8-11",
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+        },
+        "star8": {
+            "uid":"2",
+            "date-start": "2017-8-12",
+            "date-end": "2017-8-18",
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+        },
+        "star9": {
+            "uid":"2",
+            "date-start": "2017-8-19",
+            "date-end": "2017-8-25",
+            "gold": 0,
+            "silver": 0,
+            "bronze": 0
+        }
+    },
+    "group": {
+        "group0":{
+            "name": "Main Group",
+            "date_created": "",
+            "deadline": "",
+            "users": {
+                "user0": true,
+                "user1": true,
+                "user2": true,
+                "user3": true
+            }
+        }
+    } 
+}

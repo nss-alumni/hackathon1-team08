@@ -51,9 +51,13 @@ app.config( $routeProvider => {
     controller: 'HomeCtrl',
     resolve: {isAuth}
   })
-  .when('/profile', {
+  .when('/progress', {
     templateUrl: 'partials/progress.html',
     controller: 'ProgressCtrl',
+  })
+  .when('/createGroup', {
+    templateUrl: 'partials/groupForm.html',
+    controller: 'CreateGroupCtrl',
     resolve: {isAuth}
   })
   .when('/task/create', {
