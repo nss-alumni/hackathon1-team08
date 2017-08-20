@@ -26,7 +26,7 @@ app.factory("TaskFactory", function($q, $http, fbcreds, $route){
 	const deleteTask = (taskId) => {
 		return $http.delete(`${fbcreds.databaseURL}/task/${taskId}.json`)
 		.catch(console.error);
-	}
+	};
 
 	return { createTask, getTask, updateTask, toggleTaskComplete, deleteTask };
 

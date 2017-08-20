@@ -6,7 +6,9 @@ app.factory("UserFactory", function($q, $http, fbcreds){
             $http.post(`${fbcreds.databaseURL}/user.json`,
                 JSON.stringify({
                     username: authData.username,
-                    name: authData.name
+                    name: authData.name,
+                    uid: authData.uid,
+                    email: authData.email
                 })
             )
             .then( (addUserResponse)=>{
@@ -17,6 +19,7 @@ app.factory("UserFactory", function($q, $http, fbcreds){
             });
         });
     };
+
     let authUser = (userId)=>{
         return $q((resolve,reject)=>{
             $http.get(`${fbcreds.databaseURL}/user.json?orderBy="uid"&equalTo="${userId}"`)
