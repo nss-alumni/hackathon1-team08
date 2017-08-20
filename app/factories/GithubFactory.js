@@ -8,7 +8,7 @@ app.factory("GithubFactory", function($q, $http, $rootScope){
                 }
             })
             .then( (getGithubResponse)=>{
-                console.log("getGithubResponse", getGithubResponse);
+                // console.log("getGithubResponse", getGithubResponse);
                 resolve(getGithubResponse.data);
             })
             .catch( (getHypothesisError)=>{
@@ -24,7 +24,7 @@ app.factory("GithubFactory", function($q, $http, $rootScope){
                 }
             })
             .then( (getGithubResponse)=>{
-                console.log("getGithubResponse", getGithubResponse);
+                // console.log("getGithubResponse", getGithubResponse);
                 resolve(getGithubResponse.data);
             })
             .catch( (getHypothesisError)=>{
@@ -32,5 +32,6 @@ app.factory("GithubFactory", function($q, $http, $rootScope){
             });
         });
     };
+
     return {getGithubUser, getGithubEvents};
 });

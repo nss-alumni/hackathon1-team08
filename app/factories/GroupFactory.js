@@ -34,28 +34,11 @@ app.factory("GroupFactory", function($q, $http, fbcreds, $route){
             });
         });
     };
-    // let addUserGroup  = (userId, groupName)=>{
-    //     return $q((resolve, reject) => {
-    //         $http.put(`${fbcreds.databaseURL}/group/user/${userId}.json"`,
-    //             JSON.stringify({
-    //                 group:{ 
-    //                     groupName: true
-    //                 }
-    //             })
-    //         )
-    //         .then((allUsersResponse) => {
-    //             console.log(allUsersResponse);
-    //             // let users = [];
-    //             // Object.keys(allUsersResponse.data).forEach((key) => {
-    //             //     users.push(allUsersResponse.data[key]);
-    //             //  });
-    //             resolve(allUsersResponse);
-    //          })
-    //         .catch((errorResponse) => {
-    //             reject(errorResponse);
-    //         });
-    //     });
-    // };
+    let getGroup = (groupId) =>{
+        return $http.get(`${fbcreds.databaseURL}/group/${groupId}.json`)
+        .then(res => res.data)
+        .catch(console.error);
+    };
     let getUserGroup  = (userId)=>{
         return $q((resolve, reject) => {
             $http.get(`${fbcreds.databaseURL}/user/${userId}/groups.json`)
@@ -90,7 +73,7 @@ app.factory("GroupFactory", function($q, $http, fbcreds, $route){
         });
     };
 	return {
-		getGroupActivity, getAllUsersGroup, getUserGroup
+		getGroupActivity, getAllUsersGroup, getUserGroup, getGroup
 	};
     
 });
