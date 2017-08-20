@@ -26,9 +26,9 @@ app.controller("ProgressCtrl", function ($scope, ProgressFactory, $rootScope, Ta
             });
         });
 
-    $http.get(`${fbcreds.databaseURL}/task.json`)
-    .then(res => {
-        $scope.tasks = res.data;
+    TaskFactory.getAllTasks()
+    .then(tasks => {
+        $scope.tasks = tasks;
     });
 
     $scope.completeTask = (taskId, taskObj) => {

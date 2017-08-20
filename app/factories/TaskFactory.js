@@ -2,6 +2,11 @@
 
 app.factory("TaskFactory", function($q, $http, fbcreds, $route){
 
+	const getAllTasks = () => {
+		return $http.get(`${fbcreds.databaseURL}/task.json`)
+		.then(res => res.data);
+	};
+
 	const createTask = (newTask) => {
 		return $http.post(`${fbcreds.databaseURL}/task/.json`, newTask)
 		.catch(console.error);
@@ -28,6 +33,6 @@ app.factory("TaskFactory", function($q, $http, fbcreds, $route){
 		.catch(console.error);
 	};
 
-	return { createTask, getTask, updateTask, toggleTaskComplete, deleteTask };
+	return { getAllTasks, createTask, getTask, updateTask, toggleTaskComplete, deleteTask };
 
 });
