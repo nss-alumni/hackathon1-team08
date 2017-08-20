@@ -10,11 +10,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col s4">
-            <h4 class="center-align">Historic Activity</h4>
-            <div id="myBarChart"></div>
-        </div>
-        <div class="col s8">
+        <div class="col s8 offset-s2">
             <div class="row">
                 <div class="input-field">
                     <input type="text" id="search" ng-model="searchTerm" >
@@ -24,7 +20,7 @@
             <div class="row">
                 <h4 class="center-align">Latest Activity</h4>
                 <div class="row"  ng-repeat="item in tasks | filter: searchTerm">
-                    <div class="col s12 m8 offset-m4">
+                    <div class="col s12">
                         <div class="card indigo darken-1">
                             <div class="card-content white-text">
                                 <p>User: {{item.response.name || item.username}}</p>

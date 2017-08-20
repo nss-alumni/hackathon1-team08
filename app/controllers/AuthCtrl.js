@@ -43,7 +43,7 @@ app.controller("AuthCtrl", function($location, $scope, $rootScope, AuthFactory, 
     };
     $scope.loginGithubUser = ()=>{
         AuthFactory.authenticateGithub().then( (logGithubResponse)=>{
-            console.log($rootScope.token);
+            console.log(logGithubResponse);
             $rootScope.user = logGithubResponse;
             $scope.login = {};
             $scope.register = {};
