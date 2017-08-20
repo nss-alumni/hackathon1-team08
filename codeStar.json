@@ -1,5 +1,9 @@
 {
 	"user": {
+		"0": {
+			"name": "James Potter",
+			"username": "jpotter"
+		},
 		"1": {
 			"name": "Harry Potter",
 			"username": "hpotter"
@@ -14,6 +18,14 @@
 		}
 	},
 	"task": {
+		"0": {
+			"uid":0,
+			"title":"First",
+			"text":"Push to GitHub",
+			"completed": "true", 
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11"
+		},
 		"1": {
 			"uid":1,
 			"title":"First",
@@ -120,6 +132,14 @@
 		}
 	},
 	"star": {
+		"0": {
+			"uid":0,
+			"date-start": "2017-8-5",
+			"date-end": "2017-8-11",
+			"gold": 0,
+			"silver": 0,
+			"bronze": 1
+		},
 		"1": {
 			"uid":1,
 			"date-start": "2017-8-5",
