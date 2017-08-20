@@ -34,8 +34,9 @@ app.factory("UserFactory", function($q, $http, fbcreds){
 
     let getUser = (userId)=>{
         return $q((resolve,reject)=>{
-            $http.get(`${fbcreds.databaseURL}/user/${userId}.json`)
+            $http.get(`${fbcreds.databaseURL}/user.json?orderBy="uid"&equalTo="${userId}"`)
             .then((userObject)=>{
+                //console.log("userObject", userObject);
                 let users = [];
                 Object.keys(userObject).forEach( (key)=>{
                     users.push(userObject[key]);
@@ -47,6 +48,22 @@ app.factory("UserFactory", function($q, $http, fbcreds){
             });
         });
     };
+    let getAllUsers = ()=>{
+        return $q((resolve, reject) => {
+            $http.get(`${fbcreds.databaseURL}/user.json`)
+            .then((allUsersResponse) => {
+                let users = [];
+                Object.keys(allUsersResponse.data).forEach((key) => {
+                    allUsersResponse.data[key].key = key;
+                    users.push(allUsersResponse.data[key]);
+                 });
+                resolve(users);
+             })
+            .catch((errorResponse) => {
+                reject(errorResponse);
+            });
+        });
+    };
 
-    return {addUser:addUser, getUser:getUser, authUser:authUser};
+    return {addUser:addUser, getUser:getUser, authUser:authUser, getAllUsers:getAllUsers};
 });

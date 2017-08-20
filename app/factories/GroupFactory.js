@@ -19,9 +19,22 @@ app.factory("GroupFactory", function($q, $http, fbcreds, $route){
 		});
 	};
 
+	// Add's group's object to firebase
+	const createGroup = ( groupObj ) => {
+		return $q( (resolve, reject) => {
+			let object = JSON.stringify(groupObj);
+			$http.post(`${fbcreds.databaseURL}/group.json`, object)
+			.then( response => {
+				resolve(response);
+			})
+			.catch( error => {
+				reject(error);
+			});
+		});
+	};
 
 	return {
-		getGroupActivity
+		getGroupActivity, createGroup
 	};
     
 });
