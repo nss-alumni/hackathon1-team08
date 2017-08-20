@@ -25,25 +25,30 @@ app.run(($rootScope, $location, AuthFactory, fbcreds)=>{
     let logged = AuthFactory.isAuthenticated();
     let appTo;
     if (currRoute.originalPath){
-      appTo = currRoute.originalPath.indexOf('/auth') !== -1;
+      appTo = currRoute.originalPath.indexOf('/') !== -1;
     }
     console.log("appTo", appTo);
     if(!appTo && !logged){
       event.preventDefault();
-      $location.path('/auth');
+      $location.path('/');
     }
   });
 });
 
 app.config( $routeProvider => {
   $routeProvider
-  .when("/", {
-        templateUrl: "partials/sample.html",
-        controller: "SampleCtrl"
-    })
+  // .when("/", {
+  //       templateUrl: "partials/sample.html",
+  //       controller: "SampleCtrl"
+  //   })
   .when('/', {
       templateUrl: 'partials/auth.html',
       controller: 'AuthCtrl'
     })
+  .when('/home', {
+    templateUrl: 'partials/home.html',
+    controller: 'HomeCtrl',
+    resolve: {isAuth}
+  })
   .otherwise('/');
 });

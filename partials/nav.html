@@ -6,7 +6,7 @@
             <a href="#!" class="brand-logo center">Code Stars</a>
             
             <!-- normal navigation -->
-            <ul class="right hide-on-med-and-down" ng-repeat="navItem in navItems" >
+            <ul class="right hide-on-med-and-down" ng-repeat="navItem in navItems" ng-show="user">
                 <li><a href="{{navItem.url}}">{{navItem.name}}</a></li>
             </ul>  
             <!-- Side navigation  -->
