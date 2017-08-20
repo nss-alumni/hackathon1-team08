@@ -37,16 +37,18 @@ app.controller("HomeCtrl", function($rootScope, $scope, $location, UserFactory, 
 
                     });
                 });
+                let usernames = ['ZoeLeBlanc', 'Adobe-Android', 'elizawmeeks', 'jamestonkin','DominicSerranoC14'];
+                usernames.forEach((user)=>{
+                    GithubFactory.getGithubUser(user).then((response)=>{
+                    console.log("github", response);
+                    let githubEvents = response;
+                    githubEvents.forEach((event)=>{
+                         $scope.tasks.push({'github_id':event.actor.id, 'username': event.actor.login, 'github_date_create': event.created_at, 'payload': event.payload, 'public': event.public, 'repo_url':event.repo.url, 'type':event.type, 'uid':$rootScope.user.uid, 'completed':false});
 
-                // GithubFactory.getGithubUser($rootScope.user.username).then((response)=>{
-                //     console.log("github", response);
-
-                //     let githubEvents = response;
-                //     githubEvents.forEach((event)=>{
-                //          $scope.tasks.push({'github_id':event.actor.id, 'username': event.actor.login, 'github_date_create': event.created_at, 'payload': event.payload, 'public': event.public, 'repo_url':event.repo.url, 'type':event.type, 'uid':$rootScope.user.uid, 'completed':false});
-
-                //     });
-                // });
+                    });
+                });
+                });
+                
             });
 
             console.log("$scope.tasks", $scope.tasks);
