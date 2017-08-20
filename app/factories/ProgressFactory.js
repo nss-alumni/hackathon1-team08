@@ -3,23 +3,19 @@
 app.factory("ProgressFactory", function ($q, $http, fbcreds, $route) {
 
 	const getUserStars = (userId) => {
-		return $q((resolve, reject) => {
-			let object = JSON.stringify(userId);
-			console.log(userId);
+		// return $q((resolve, reject) => {
+			console.log("userID?", userId.uid);
 			// bronze = $http.get(`${fbcreds.databaseURL}/star.json`),
 			// silver = $http.get(`${fbcreds.databaseURL}/star/0/silver.json?orderBy="uid"&equalTo="${user}"`),
-			let gold = $http.get(`${fbcreds.databaseURL}/star/.json?orderBy="uid"&equalTo="${userId}"`);
-
-			$q.all([
-					gold
-				])
+			
+			return $http.get(`${fbcreds.databaseURL}/star.json?orderBy="uid"&equalTo="${userId.uid}"`)
 				.then(result => {
-					resolve(result);
+					return result;
 				})
 				.catch(error => {
-					reject(error);
+					// reject(error);
 				});
-		});
+		// });
 	};
 
 	// ng-click that redirects to the create/edit task page
