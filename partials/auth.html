@@ -1,39 +1,20 @@
 <div class="container">
-    <div class="row">
-        <button class="waves-effect waves-light btn col s3 offset-s1" ng-click="setRegisterContainer()">Register</button>
-        <button class="waves-effect waves-light btn col s3 offset-s1" ng-click="setLoginContainer()">Login</button>
-        <button class="waves-effect waves-light btn col s3 offset-s1" ng-click="loginGoogleUser()">Google Sign In</button>
-    </div>
-    <div class="row">
-        <div ng-show="loginContainer">
-            <h3>LOGIN FORM</h3>
-            <div class="row">
-                <input id="login-email" type="email" class="input-field col s10 offset-s1" placeholder="Email address" ng-model="login.email" required autofocus>
-            </div>
-            <div class="row">
-                <input type="password" class="input-field col s10 offset-s1" placeholder="Password" ng-model="login.password" required>
-            </div>
-            <div class="row">
-                <a class="waves-effect waves-light btn col s10 offset-s1" ng-click="loginUser(login)">Submit Login</a>
-            </div>
-        </div>
-        <div ng-show="registerContainer">
-            <h3>REGISTER FORM</h3>
-            <div class="row">
-                <input type="email" class="input-field col s10 offset-s1" placeholder="Email address" ng-model="register.email" required autofocus>
-            </div>
-            <div class="row">
-                <input type="text" class="input-field col s10 offset-s1" placeholder="Name" ng-model="register.name" required>
-            </div>
-            <div class="row">
-                <input type="text" class="input-field col s10 offset-s1" placeholder="Username" ng-model="register.username" required>
-            </div>
-            <div class="row">
-                <input type="password" class="input-field col s10 offset-s1" placeholder="Password" ng-model="register.password" required>
-            </div>
-            <div class="row">
-                <a class="waves-effect waves-light btn col s10 offset-s1" ng-click="registerUser(register)">Submit Registration</a>
-            </div>
-        </div>
-    </div>
+    <h1 class="auth-h1">Welcome to Code Stars</h1>
+
+    <br>
+
+    <button class="get-started-button" ng-click="">Click to login to GitHub</button>
+
+    <br>
+
+    <img src="http://hammerjs.github.io/assets/img/github-icon.png" alt="github" class="auth-img" text="Get started with GitHub">
+
+    <br>
 </div>
+
+
+
+
+
+
+
