@@ -1,6 +1,6 @@
 "use strict";
-import GitHub from 'github-api';
-const app = angular.module("CodeStars", ["ngRoute", 'ui.materialize', 'GitHub']);
+// import GitHub from 'github-api';
+const app = angular.module("CodeStars", ["ngRoute", 'ui.materialize']);
 
 let isAuth = (AuthFactory)=>{
   new Promise( (resolve, reject)=>{

@@ -1,6 +1,6 @@
 "use strict";
-app.factory("GithubFactory", function($q, $http, githubcreds, GitHub){
-    const GH = new GitHub();
+app.factory("GithubFactory", function($q, $http, githubcreds){
+    // const GH = new GitHub();
     var getGithubUser = (userInput)=>{
         return $q((resolve,reject)=>{
             $http.get(`https://hypothes.is/api/${userInput}`, {
