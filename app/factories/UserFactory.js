@@ -23,7 +23,6 @@ app.factory("UserFactory", function($q, $http, fbcreds){
             .then((userObject)=>{
                 console.log("userObject", userObject.data);
                 let users = Object.values(userObject.data);
-                console.log(users);
                 resolve(users[0]);
             })
             .catch((getUserError)=>{
@@ -32,11 +31,11 @@ app.factory("UserFactory", function($q, $http, fbcreds){
         });
     };
 
-    let getUser = (userId)=>{
+    let getUser = (name)=>{
         return $q((resolve,reject)=>{
-            $http.get(`${fbcreds.databaseURL}/user.json?orderBy="uid"&equalTo="${userId}"`)
+            $http.get(`${fbcreds.databaseURL}/user.json?orderBy="name"&equalTo="${name}"`)
             .then((userObject)=>{
-                //console.log("userObject", userObject);
+                console.log("userObject", userObject);
                 let users = [];
                 Object.keys(userObject).forEach( (key)=>{
                     users.push(userObject[key]);

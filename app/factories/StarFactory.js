@@ -8,7 +8,6 @@ app.factory("StarFactory", function($q, $http, fbcreds, $route){
 			$http.get(`${fbcreds.databaseURL}/star.json`)
 			.then( starData => {
 				let stars = starData.data;
-				console.log("stars", stars);
 				Object.keys(stars).forEach( key => {
 					stars[key].id = key;
 				});

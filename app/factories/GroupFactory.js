@@ -19,6 +19,23 @@ app.factory("GroupFactory", function($q, $http, fbcreds, $route){
 		});
 	};
 
+	// Get group's activity
+	const getGroup = (  ) => {
+		return $q( (resolve, reject) => {
+			$http.get(`${fbcreds.databaseURL}/group.json`)
+			.then( groupData => {
+				let group = groupData.data;
+				Object.keys(group).forEach( key => {
+					group[key].id = key;
+				});
+				resolve(group);
+			})
+			.catch( error => {
+				reject (error);
+			});
+		});
+	};
+
 	// Add's group's object to firebase
 	const createGroup = ( groupObj ) => {
 		return $q( (resolve, reject) => {
@@ -34,7 +51,7 @@ app.factory("GroupFactory", function($q, $http, fbcreds, $route){
 	};
 
 	return {
-		getGroupActivity, createGroup
+		getGroupActivity, createGroup, getGroup
 	};
     
 });

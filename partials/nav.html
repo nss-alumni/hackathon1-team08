@@ -11,6 +11,7 @@
                     <li><a href="#/home">Home</a></li>
                     <li><a href="#/progress">Progress</a></li>
                     <li><a href="#/logout">Logout</a></li>
+                    <li><a href="#" data-activates="nav-mobile" data-sidenav="right" data-menuwidth="300" data-closeonclick="true" >Groups</a></li>
                 </ul>  
                 <a href="#" data-activates="nav-mobile" data-sidenav="right" data-menuwidth="300" data-closeonclick="true" class="right hide-on-large-only button-collapse"><i class="material-icons">menu</i></a>
               </div><!-- /.navwrapper -->
@@ -29,6 +30,17 @@
             <li><a href="#/home">Home</a></li>
             <li><a href="#/progress">Progress</a></li>
             <li><a href="#/logout">Logout</a></li>
+            <hr>
+            <div class="col s10 offset-s1">
+                <li><a ng-href="/#!/createGroup"><h5>Create Group</h5></a></li>
+            </div>
+            <hr>
+            <li><a><h5>Join A Group</h5></a></li>
+            <div ng-repeat="item in Groups">
+                <li><a>{{item.name}}</a></li>
+            </div>
+
         </ul>
+
     </header>
 </div>
