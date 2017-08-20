@@ -3,7 +3,7 @@
 app.factory("UserFactory", function($q, $http, fbcreds){
     let addUser = (authData)=>{
         return $q((resolve,reject)=>{
-            $http.post(`${fbcreds.databaseURL}/user.json`, 
+            $http.post(`${fbcreds.databaseURL}/user.json`,
                 JSON.stringify({
                     username: authData.username,
                     name: authData.name
@@ -48,7 +48,6 @@ app.factory("UserFactory", function($q, $http, fbcreds){
             });
         });
     };
-
     let getAllUsers = ()=>{
         return $q((resolve, reject) => {
             $http.get(`${fbcreds.databaseURL}/user.json`)

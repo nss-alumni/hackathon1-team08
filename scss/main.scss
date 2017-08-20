@@ -1,1 +1,8 @@
 @import "./_variables";
+
+// Page styles
+@import "./_task.scss";
+
+#sidenav-overlay {
+    z-index: 1;
+}
