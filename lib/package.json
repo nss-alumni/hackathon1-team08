@@ -1,7 +1,6 @@
 {
-  "name": "CodeStars",
+  "name": "codestars",
   "version": "1.0.0",
-  "description": "",
   "main": "index.html",
   "author": "Hackathon Team 8",
   "license": "ISC",
@@ -22,5 +21,9 @@
     "grunt-contrib-uglify": "^3.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^2.0.0"
-  }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "description": ""
 }
